@@ -6,7 +6,7 @@
 #    By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 22:00:16 by rmartins          #+#    #+#              #
-#    Updated: 2021/01/10 13:32:01 by rmartins         ###   ########.fr        #
+#    Updated: 2021/01/10 21:35:57 by rmartins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,11 @@ OBJS_BONUS = $(SRCS_BONUS:%.c=$(DIR_OBJS)%.o)
 AR = ar rcs
 INDEXLIB = ranlib
 DIR_OBJS = ./compiled_srcs/
-SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_strlen.c
+SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_strlen.c
 #ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 			ft_tolower.c ft_toupper.c ft_strlcpy.c ft_strlcat.c \
 			ft_strchr.c ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c \
-			 ft_memcpy.c ft_memccpy.c ft_memmove.c \
+			   ft_memmove.c \
 			ft_memchr.c ft_memcmp.c ft_strdup.c ft_calloc.c ft_itoa.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 			ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_strmapi.c
@@ -66,6 +66,8 @@ rebonus: fclean bonus
 
 .PHONY:		all clean fclean re bonus rebonus
 
+
+
 ## PARA ELIMINAR
 so:   
 	$(CC) -fPIC -c $(CFLAGS) $(SRCS)
@@ -75,3 +77,6 @@ so:
 norm:
 	norminette -R CheckForbiddenSourceHeader $(SRCS)
 	norminette $(HEADER)
+
+run:
+	sh ./test/run.sh

@@ -1,0 +1,1 @@
+gcc -Wall -Werror -Wextra -g -fsanitize=address test/main_memcpy.c ft_memcpy.c -o test/a.out && ./test/a.out && rm test/a.out
