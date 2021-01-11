@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/10 21:35:02 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/11 21:27:06 by rmartins         ###   ########.fr       */
+/*   Created: 2021/01/11 21:30:13 by rmartins          #+#    #+#             */
+/*   Updated: 2021/01/11 22:46:25 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void				*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			i;
+	int				i;
 	unsigned char	*d;
 	unsigned char	*s;
-	unsigned char	temp;
 
+	if (!dest && !src && n > 0)
+		return (NULL);
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-	temp = (unsigned char)c;
-	i = 0;
-	while (i < n)
+	if (dest <= src)
 	{
-		d[i] = s[i];
-		if (s[i] == temp)
+		i = 0;
+		while (i < (int)n)
 		{
-			return (&d[i + 1]);
+			d[i] = s[i];
+			i++;
 		}
-		i++;
 	}
-	return (NULL);
+	else
+	{
+		i = (int)n;
+		while (--i >= 0)
+			d[i] = s[i];
+	}
+	return (dest);
 }
