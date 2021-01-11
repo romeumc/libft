@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 21:35:02 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/10 21:44:19 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/01/11 18:07:37 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ void				*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (d[i] != '\0' || s[i] != '\0' || s[i] == temp)
-			d[i] = s[i];
-		else
-			return (0);
+		d[i] = s[i];
+		if (s[i] == temp)
+		{
+			return (&d[i]);
+		}
 		i++;
 	}
-	return (d);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 13:30:55 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/10 21:17:26 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/01/11 17:59:28 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void		*ft_memcpy(void *dest, const void *src, size_t n)
 		if (d[i] != '\0' || s[i] != '\0')
 			d[i] = s[i];
 		else
-			return (0);
+			return (d);
 		i++;
 	}
 	return (d);
