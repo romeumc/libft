@@ -44,29 +44,27 @@ int main ()
 	// 	//printf("i: %d %c ==> %3d\n", i, i, isalnum(i));
 	// 	i++;
 	// }
+
+
+	int ch;                                                                      
+                                                                                
+	for ( ch = 0; ch <= 255; ++ch )                                      
+	{                                                                            
+		printf("%3d ", ch);                                                       
+		printf("%#04x ", ch);                                                     
+		printf(" %c ",  isprint(ch)  ? ch   : ' ');                                
+		printf("%3s ", isalnum(ch)  ? "Alphanumeric" : " ");                      
+		printf("%2s ", isalpha(ch)  ? "Alphabetic"  : " ");                       
+		printf("%2s ",  iscntrl(ch)  ? "Control"  : " ");                          
+		printf("%2s ",  isdigit(ch)  ? "Digit"  : " ");                            
+		printf("%2s ",  isgraph(ch)  ? "Graphic"  : " ");                          
+		printf("%2s ",  islower(ch)  ? "Lower"  : " ");                           
+		printf("%3s ",  ispunct(ch)  ? "Punctuation" : " ");                       
+		printf("%2s ",  isspace(ch)  ? "Space"  : " ");                            
+		printf("%3s ",  isprint(ch)  ? "Printable" : " ");                         
+		printf("%2s ",  isupper(ch)  ? "Upper"  : " ");                           
+		printf("%2s ",  isxdigit(ch) ? "Hex"  : " ");                             
+																					
+		putchar('\n');                                                            
+	}
 }
-                                          
-// int main(void)                                                                  
-// {                                                                               
-//    int ch;                                                                      
-                                                                                
-//    for ( ch = -110; ch <= 530; ++ch )                                      
-//    {                                                                            
-//       printf("%3d ", ch);                                                       
-//       printf("%#04x ", ch);                                                     
-//       printf(" %c ",  isprint(ch)  ? ch   : ' ');                                
-//       printf("%3s ", isalnum(ch)  ? "Alphanumeric" : " ");                      
-//       printf("%2s ", isalpha(ch)  ? "Alphabetic"  : " ");                       
-//       printf("%2s ",  iscntrl(ch)  ? "Control"  : " ");                          
-//       printf("%2s ",  isdigit(ch)  ? "Digit"  : " ");                            
-//       printf("%2s ",  isgraph(ch)  ? "Graphic"  : " ");                          
-//       printf("%2s ",  islower(ch)  ? "Lower"  : " ");                           
-//       printf("%3s ",  ispunct(ch)  ? "Punctuation" : " ");                       
-//       printf("%2s ",  isspace(ch)  ? "Space"  : " ");                            
-//       printf("%3s ",  isprint(ch)  ? "Printable" : " ");                         
-//       printf("%2s ",  isupper(ch)  ? "Upper"  : " ");                           
-//       printf("%2s ",  isxdigit(ch) ? "Hex"  : " ");                             
-                                                                                
-//       putchar('\n');                                                            
-//    }                                                                            
-// }
