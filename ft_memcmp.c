@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 21:30:13 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/11 23:47:24 by rmartins         ###   ########.fr       */
+/*   Created: 2021/01/11 23:00:39 by rmartins          #+#    #+#             */
+/*   Updated: 2021/01/11 23:55:20 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				*ft_memmove(void *dest, const void *src, size_t n)
+int					ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int				i;
-	unsigned char	*d;
-	unsigned char	*s;
+	unsigned char	*a;
+	unsigned char	*b;
+	size_t			i;
 
-	if (!dest && !src && n > 0)
-		return (NULL);
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (dest <= src)
-	{
-		i = 0;
-		while (i < (int)n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
-	else
-	{
-		i = (int)n;
-		while (--i >= 0)
-			d[i] = s[i];
-	}
-	return (dest);
+	i = 0;
+	a = (unsigned char*)s1;
+	b = (unsigned char*)s2;
+	while (i < n && a[i] == b[i])
+		i++;
+	return ((i == n) ? 0 : a[i] - b[i]);
 }
