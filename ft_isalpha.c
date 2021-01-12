@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 23:59:16 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/12 00:06:02 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/01/12 00:23:50 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (c);
-	else
-		return (0);
+		return (1);
+	return (0);
 }
