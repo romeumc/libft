@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/12 17:08:40 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/12 22:10:23 by rmartins         ###   ########.fr       */
+/*   Created: 2021/01/12 21:42:01 by rmartins          #+#    #+#             */
+/*   Updated: 2021/01/12 21:57:46 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	len_src;
+	size_t	j;
 
 	i = 0;
-	len_src = ft_strlen(src);
-	if (size == 0)
-		return (len_src);
-	while (src[i] != '\0' && i < (size - 1))
-	{
-		dst[i] = src[i];
+	j = 0;
+	while (dst[i] != '\0' && i < size)
 		i++;
+	while (src[j] != '\0' && (i + j + 1) < size)
+	{
+		dst[i + j] = src[j];
+		j++;
 	}
-	dst[i] = '\0';
-	return (len_src);
+	if (i < size)
+		dst[i + j] = '\0';
+	j = 0;
+	while (src[j] != '\0')
+		j++;
+	return (i + j);
 }
