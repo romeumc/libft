@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 23:59:16 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/12 22:54:23 by rmartins         ###   ########.fr       */
+/*   Created: 2021/01/12 22:16:23 by rmartins          #+#    #+#             */
+/*   Updated: 2021/01/13 00:18:42 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (little[0] == '\0')
+		return ((char *)big);
+	while (big[i] != '\0' && (i + j) < len)
+	{
+		j = 0;
+		while (big[i + j] == little[j] && (i + j) < len)
+		{
+			if (little[j + 1] == '\0')
+				return ((char *)&big[i]);
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
 }
