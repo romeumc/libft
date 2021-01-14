@@ -6,46 +6,53 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:45:22 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/14 15:15:14 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/01/14 23:17:33 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static void	saveword(char *str, char c, int counter, char **result)
+static char	*saveword(const char *str, char c, int counter, char **result)
 {
-	int		len;
-	int		j;
+	int		i;
 	char	*word;
 
-	len = 0;
-	j = 0;
-	while (str[len] != c && str[len] != '\0')
-		len++;
-	word = malloc(sizeof(char) * (len + 1));
-	while (j < len)
+	i = 0;
+	while (str[i] != c && str[i] != '\0')
+		i++;
+	word = malloc(sizeof(char) * (i + 1));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (str[i] != c && str[i] != '\0')
 	{
-		word[j] = str[j];
-		j++;
+		word[i] = str[i];
+		i++;
 	}
-	word[j] = '\0';
+	word[i] = '\0';
 	result[counter] = word;
+	return (NULL);
 }
 
-static int	wordcount(char *ptr, char c, char **res, int save)
+static int	wordcount(const char *s, char c, char **res, int save)
 {
 	int		i;
 	int		wc;
 
 	i = 0;
-	wc = 1;
-	while (ptr[i] != '\0')
+	wc = 0;
+	while (s[i] != '\0')
 	{
-		if (ptr[i] == c && ptr[i + 1] != c && ptr[i + 1] != '\0')
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 		{
 			if (save == 1)
-				saveword(&ptr[i], c, wc - 1, res);
+				saveword(&s[i + 1], c, wc, res);
+			wc++;
+		}
+		else if (wc == 0 && s[i] != c)
+		{
+			if (save == 1)
+				saveword(&s[i], c, wc, res);
 			wc++;
 		}
 		i++;
@@ -55,20 +62,16 @@ static int	wordcount(char *ptr, char c, char **res, int save)
 
 char		**ft_split(char const *s, char c)
 {
-	char	*ptr;
 	char	**res;
 	int		wc;
 
 	if (!s)
 		return (NULL);
-	ptr = ft_strtrim(s, &c);
-	if (!ptr)
+	wc = wordcount(s, c, NULL, 0);
+	res = malloc(sizeof(char *) * (wc + 1));
+	if (!res)
 		return (NULL);
-	wc = wordcount(ptr, c, NULL, 0);
-	//printf("\ns:\"%s\" | c:\"%c\" | ptr:\"%s\" | wc:%d", s, c, ptr, wc);
-	res = malloc(sizeof(char *) * (wc));
-	wordcount(ptr, c, res, 1);
+	wordcount(s, c, res, 1);
 	res[wc] = NULL;
-	free(ptr);
 	return (res);
 }
