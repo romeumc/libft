@@ -6,12 +6,11 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 09:11:04 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/14 10:37:47 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/01/14 10:45:55 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	count_start(char const *s1, char const *set)
 {
