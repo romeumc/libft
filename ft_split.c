@@ -6,13 +6,13 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:45:22 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/14 23:17:33 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/01/16 19:02:38 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*saveword(const char *str, char c, int counter, char **result)
+static char	*saveword(const char *str, char c)
 {
 	int		i;
 	char	*word;
@@ -30,8 +30,7 @@ static char	*saveword(const char *str, char c, int counter, char **result)
 		i++;
 	}
 	word[i] = '\0';
-	result[counter] = word;
-	return (NULL);
+	return (word);
 }
 
 static int	wordcount(const char *s, char c, char **res, int save)
@@ -46,13 +45,13 @@ static int	wordcount(const char *s, char c, char **res, int save)
 		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 		{
 			if (save == 1)
-				saveword(&s[i + 1], c, wc, res);
+				res[wc] = saveword(&s[i + 1], c);
 			wc++;
 		}
 		else if (wc == 0 && s[i] != c)
 		{
 			if (save == 1)
-				saveword(&s[i], c, wc, res);
+				res[wc] = saveword(&s[i], c);
 			wc++;
 		}
 		i++;
@@ -65,7 +64,7 @@ char		**ft_split(char const *s, char c)
 	char	**res;
 	int		wc;
 
-	if (!s)
+	if (!s || !c)
 		return (NULL);
 	wc = wordcount(s, c, NULL, 0);
 	res = malloc(sizeof(char *) * (wc + 1));
