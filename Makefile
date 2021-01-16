@@ -6,7 +6,7 @@
 #    By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 22:00:16 by rmartins          #+#    #+#              #
-#    Updated: 2021/01/16 20:33:51 by rmartins         ###   ########.fr        #
+#    Updated: 2021/01/16 23:36:49 by rmartins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,9 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SRCS_BONUS = #ft_lstsize.c ft_lstlast.c ft_lstadd_front.c ft_lstadd_back.c \
-			ft_lstnew.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c
+			#ft_lstsize.c ft_lstlast.c  ft_lstadd_back.c \
+			 ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 			ft_swap_bonus.c ft_islower_bonus.c ft_isupper_bonus.c \
 			ft_iscntrl_bonus.c ft_isgraph_bonus.c ft_ispunct_bonus.c \
 			ft_isspace_bonus.c ft_isblank_bonus.c ft_isxdigit_bonus.c \
@@ -50,11 +51,12 @@ $(DIR_OBJS)%.o: %.c
 	gcc $(CFLAGS) -include $(HEADER) -c $< -o $@
 
 $(OBJS):	| $(DIR_OBJS)
+$(OBJS_BONUS):	| $(DIR_OBJS)
 $(DIR_OBJS):
 	mkdir $(DIR_OBJS)
 
 clean:
-	#rm -f $(OBJS) $(OBJS_BONUS)
+	@#rm -f $(OBJS) $(OBJS_BONUS)
 	rm -rf $(DIR_OBJS)
 
 fclean: clean
@@ -70,8 +72,8 @@ rebonus: fclean bonus
 
 ## PARA ELIMINAR
 so:   
-	$(CC) -fPIC -c $(CFLAGS) $(SRCS)
-	gcc -shared -o libft.so $(OBJS)
+	$(CC) -fPIC -c $(CFLAGS) $(SRCS) $(SRCS_BONUS)
+	gcc -shared -o libft.so $(OBJS) $(OBJS_BONUS)
 	rm -f *.o
 
 norm:
