@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 23:37:27 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/16 23:37:43 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/01/19 08:59:56 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void			ft_lstadd_front(t_list **lst, t_list *new)
 {
-
+	if (lst != NULL && new != NULL)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }
