@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 21:30:52 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/19 10:07:15 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/01/19 10:35:14 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ t_list			*ft_lstlast(t_list *lst);
 void			ft_lstadd_back(t_list **lst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif
