@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int	ft_toupper(char c);
+//int	ft_toupper(char c);
 
 int main(void)
 {

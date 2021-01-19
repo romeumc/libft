@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-char		**ft_split(char const *s, char c);
+//char		**ft_split(char const *s, char c);
 
 int main()
 {
@@ -25,7 +25,7 @@ int main()
 	free(result);
 	
 	
-	source = "**romeu**romeu***";
+	source = "**romeu**ro*meu***";
 	charset = '*';
 	printf("SOURCE: \"%s\"    DELEMITER:\"%c\"\n", source, charset);
 	result = ft_split(source, charset);
@@ -38,7 +38,7 @@ int main()
 	}
 	free(result);
 	
-	source = "....";
+	source = "..a..";
 	charset = '.';
 	printf("SOURCE: \"%s\"    DELEMITER:\"%c\"\n", source, charset);
 	result = ft_split(source, charset);

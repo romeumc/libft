@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int	ft_isalnum(char c);
-int	ft_isalpha(char c);
-int	ft_isdigit(char c);
+// int	ft_isalnum(char c);
+// int	ft_isalpha(char c);
+// int	ft_isdigit(char c);
 
 int main ()
 {
