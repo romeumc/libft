@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 21:30:52 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/19 10:45:24 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/01/22 23:28:46 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,6 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 							void (*del)(void *));
+char			*ft_strcpy(char *dest, const char *src);
 
 #endif
