@@ -6,7 +6,7 @@
 #    By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 22:00:16 by rmartins          #+#    #+#              #
-#    Updated: 2021/01/22 23:27:43 by rmartins         ###   ########.fr        #
+#    Updated: 2021/01/31 22:05:25 by rmartins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,6 +83,3 @@ norm:
 
 run:
 	sh ./test/run.sh
-
-tester: norm
-	sh ./test/run_testers.sh
