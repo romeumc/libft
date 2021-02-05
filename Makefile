@@ -6,7 +6,7 @@
 #    By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 22:00:16 by rmartins          #+#    #+#              #
-#    Updated: 2021/01/31 22:05:25 by rmartins         ###   ########.fr        #
+#    Updated: 2021/02/05 12:23:12 by rmartins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ HEADER	= libft.h
 CFLAGS = -Wall -Wextra -Werror
 OBJS = $(SRCS:%.c=$(DIR_OBJS)%.o)
 OBJS_BONUS = $(SRCS_BONUS:%.c=$(DIR_OBJS)%.o)
-AR = ar rcs
-INDEXLIB = ranlib
+AR = ar -rcs
+#INDEXLIB = ranlib
 DIR_OBJS = ./compiled_srcs/
 SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		ft_memchr.c ft_memcmp.c ft_strlen.c ft_isalpha.c ft_isdigit.c \
@@ -42,11 +42,11 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
-	$(INDEXLIB) $(NAME)
+#	$(INDEXLIB) $(NAME)
 
 bonus: $(OBJS_BONUS)
 	$(AR) $(NAME) $(OBJS_BONUS)
-	$(INDEXLIB) $(NAME)
+#	$(INDEXLIB) $(NAME)
 
 $(DIR_OBJS)%.o: %.c
 	gcc $(CFLAGS) -include $(HEADER) -c $< -o $@
@@ -57,11 +57,10 @@ $(DIR_OBJS):
 	mkdir $(DIR_OBJS)
 
 clean:
-	@#rm -f $(OBJS) $(OBJS_BONUS)
-	rm -rf $(DIR_OBJS)
+	rm -rfv $(DIR_OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -fv $(NAME)
 
 re: fclean all
 
