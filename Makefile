@@ -6,7 +6,7 @@
 #    By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 22:00:16 by rmartins          #+#    #+#              #
-#    Updated: 2021/02/06 03:09:47 by rmartins         ###   ########.fr        #
+#    Updated: 2021/02/06 23:16:17 by rmartins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,10 +32,10 @@ SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_strcpy_bonus.c ft_putchar_bonus.c ft_putstr_bonus.c \
 			ft_strcat_bonus.c ft_strcmp_bonus.c ft_putnbr_bonus.c \
 			ft_strncpy_bonus.c ft_strncat_bonus.c ft_strndup_bonus.c \
-			ft_strstr_bonus.c
+			ft_strstr_bonus.c ft_isblank_bonus.c ft_isspace_bonus.c \
+			ft_isxdigit_bonus.c ft_isgraph_bonus.c
 			# ft_swap_bonus.c ft_islower_bonus.c ft_isupper_bonus.c \
-			ft_iscntrl_bonus.c ft_isgraph_bonus.c ft_ispunct_bonus.c \
-			ft_isspace_bonus.c ft_isblank_bonus.c ft_isxdigit_bonus.c \
+			ft_iscntrl_bonus.c  ft_ispunct_bonus.c \
 			ft_putendl_bonus.c ft_sqrt_bonus.c  \
 			 
 

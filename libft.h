@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 21:30:52 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/06 02:50:25 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/06 23:16:31 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,9 @@ char			*ft_strncpy(char *dest, const char *src, size_t n);
 char			*ft_strncat(char *dest, const char *src, size_t n);
 char			*ft_strndup(const char *s, size_t n);
 char			*ft_strstr(const char *haystack, const char *needle);
+int				ft_isblank(int c);
+int				ft_isspace(int c);
+int				ft_isxdigit(int c);
+int				ft_isgraph(int c);
 
 #endif
