@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:45:22 by rmartins          #+#    #+#             */
-/*   Updated: 2021/01/16 19:02:38 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/07 22:41:21 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static int	wordcount(const char *s, char c, char **res, int save)
 	return (wc);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		wc;
