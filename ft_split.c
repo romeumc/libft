@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:45:22 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/07 22:41:21 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/09 14:11:22 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	int		wc;
 
-	if (!s || !c)
+	if (!s)
 		return (NULL);
 	wc = wordcount(s, c, NULL, 0);
 	res = malloc(sizeof(char *) * (wc + 1));

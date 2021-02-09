@@ -6,7 +6,7 @@
 #    By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 22:00:16 by rmartins          #+#    #+#              #
-#    Updated: 2021/02/07 23:18:51 by rmartins         ###   ########.fr        #
+#    Updated: 2021/02/09 13:27:58 by rmartins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,5 +78,5 @@ so:
 norm:
 	@norminette $(HEADER) $(SRCS) $(SRCS_BONUS)
 
-run:
+run: bonus
 	sh ./test/run.sh

@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 //char		**ft_split(char const *s, char c);
 
@@ -11,7 +12,7 @@ int main()
 	char **result;
 	int i;
 
-	source = "  romeu  beatriz mariana rita*";
+	source = ft_strdup("  romeu  beatriz mariana rita*");
 	charset = ' ';
 	printf("SOURCE: \"%s\"    DELEMITER:\"%c\"\n", source, charset);
 	result = ft_split(source, charset);
@@ -22,10 +23,15 @@ int main()
 		printf("%s\n", result[i]);
 		i++;
 	}
+	free(source);
+	free(result[0]);
+	free(result[1]);
+	free(result[2]);
+	free(result[3]);
 	free(result);
 	
 	
-	source = "**romeu**ro*meu***";
+	source = ft_strdup("**romeu**ro*meu***");
 	charset = '*';
 	printf("SOURCE: \"%s\"    DELEMITER:\"%c\"\n", source, charset);
 	result = ft_split(source, charset);
@@ -36,9 +42,13 @@ int main()
 		printf("%s\n", result[i]);
 		i++;
 	}
+	free(source);
+	free(result[0]);
+	free(result[1]);
+	free(result[2]);
 	free(result);
 	
-	source = "..a..";
+	source = strdup("..a..");
 	charset = '.';
 	printf("SOURCE: \"%s\"    DELEMITER:\"%c\"\n", source, charset);
 	result = ft_split(source, charset);
@@ -49,11 +59,13 @@ int main()
 		printf("%s\n", result[i]);
 		i++;
 	}
+	free(source);
+	free(result[0]);
 	free(result);
 
 
 
-	source = "";
+	source = strdup("");
 	charset = '.';
 	printf("SOURCE: \"%s\"    DELEMITER:\"%c\"\n", source, charset);
 	result = ft_split(source, charset);
@@ -64,6 +76,22 @@ int main()
 		printf("%s\n", result[i]);
 		i++;
 	}
+	free(source);
+	free(result);
+
+
+	source = strdup("tripouille");
+	charset = 0;
+	printf("SOURCE: \"%s\"    DELEMITER:\"%c\"\n", source, charset);
+	result = ft_split(source, charset);
+	i = 0;
+	while(result[i])
+	{
+		printf("%s\n", result[i]);
+		i++;
+	}
+	free(source);
+	free(result[0]);
 	free(result);
 
 }
