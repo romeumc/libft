@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isspace_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 22:56:10 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/06 23:09:35 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/11 22:16:47 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

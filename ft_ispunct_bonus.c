@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ispunct_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 16:45:10 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/07 17:39:43 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/11 22:16:46 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

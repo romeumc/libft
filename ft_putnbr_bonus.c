@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 01:26:18 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/07 22:40:33 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/11 22:17:16 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/16 23:37:27 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/07 22:36:49 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/11 22:16:53 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
