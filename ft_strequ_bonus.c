@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 14:45:02 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/11 22:17:33 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/12 10:52:36 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

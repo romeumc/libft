@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:45:22 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/11 22:17:23 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/12 11:01:00 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static int	wordcount(const char *s, char c, char **res, int save)
 	return (wc);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		wc;

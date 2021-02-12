@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 23:21:30 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/11 22:16:52 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/12 10:56:52 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static void	ft_putnbr_str(int nb, char *str, int len)
 	}
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int		len;
 	char	*str;

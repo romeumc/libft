@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isxdigit_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 23:12:53 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/11 22:16:49 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/12 10:50:04 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

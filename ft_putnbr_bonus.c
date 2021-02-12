@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 01:26:18 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/11 22:17:16 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/12 11:01:19 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	ft_putnbr_long(long nb)
 		ft_putchar(nb + '0');
 }
 
-void	ft_putnbr(int n)
+void		ft_putnbr(int n)
 {
 	ft_putnbr_long(n);
 }

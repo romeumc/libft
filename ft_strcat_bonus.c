@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmartins <rmartins@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 23:37:17 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/11 22:17:24 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/12 10:52:13 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
