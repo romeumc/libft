@@ -6,11 +6,10 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 22:28:57 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/12 11:00:39 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/12 14:05:37 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 void		ft_print_radix(long int nbr, char *base, char *result, int *pos)
