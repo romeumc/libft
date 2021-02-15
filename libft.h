@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 21:30:52 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/12 10:58:43 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/15 10:20:37 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ int				ft_ispunct(int c);
 char			*ft_strdup_join(char *s, char c);
 int				ft_strequ(char *s1, char *s2);
 char			*ft_itoa_base(int number, int base);
+void			*ft_realloc(void *ptr, size_t size);
 
 #endif
