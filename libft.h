@@ -6,7 +6,11 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 21:30:52 by rmartins          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/02/19 11:27:45 by rmartins         ###   ########.fr       */
+=======
+/*   Updated: 2021/02/18 02:01:13 by rmartins         ###   ########.fr       */
+>>>>>>> f9b37cd89241e2a10ad12e1adfbb22e03a10da30
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +96,10 @@ char			*ft_strdup_join(char *s, char c);
 int				ft_strequ(char *s1, char *s2);
 char			*ft_itoa_base(int number, int base);
 void			*ft_realloc(void *ptr, size_t size);
+<<<<<<< HEAD
 void			ft_long_base(long int nbr, char *base, char *result);
+=======
+void			ft_putnstr(char *s, size_t n);
+>>>>>>> f9b37cd89241e2a10ad12e1adfbb22e03a10da30
 
 #endif

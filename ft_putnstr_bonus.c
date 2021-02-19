@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_putnstr_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/15 10:18:26 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/16 18:11:57 by rmartins         ###   ########.fr       */
+/*   Created: 2021/02/05 23:26:04 by rmartins          #+#    #+#             */
+/*   Updated: 2021/02/18 02:04:29 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_realloc(void *ptr, size_t size)
+void	ft_putnstr(char *s, size_t n)
 {
-	void	*newptr;
+	int	i;
 
-	if (ptr == NULL)
+	i = 0;
+	while (s != NULL && s[i] != '\0' && i < (int)n)
 	{
-		ptr = malloc(size);
-		if (ptr == NULL)
-			return (NULL);
+		ft_putchar(s[i]);
+		i++;
 	}
-	if (size == 0 && ptr != NULL)
-		free(ptr);
-	else
-	{
-		newptr = malloc(size);
-		if (newptr == NULL)
-			return (NULL);
-		else
-		{
-			ft_memcpy(newptr, ptr, size);
-			free(ptr);
-			return (newptr);
-		}
-	}
-	return (ptr);
 }
