@@ -6,11 +6,11 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 11:12:23 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/19 11:27:50 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/19 14:32:07 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_long_base(long int nbr, char *base, char *result)
+void	ft_long_base(long int nbr, char *base)
 {
 	size_t	len_base;
 
@@ -19,10 +19,10 @@ void	*ft_long_base(long int nbr, char *base, char *result)
 	{
 		nbr *= -1;
 	}
-	if (nbr >= len_base)
+	if (nbr >= (int)len_base)
 	{
-		ft_print_radix(nbr / len_base, base, result);
-		ft_print_radix(nbr % len_base, base, result);
+		ft_long_base(nbr / len_base, base);
+		ft_long_base(nbr % len_base, base);
 	}
 	else
 	{
