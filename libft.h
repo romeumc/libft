@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 21:30:52 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/22 00:33:53 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/22 22:14:01 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,5 @@ void			*ft_realloc(void *ptr, size_t size);
 void			ft_long_base(long int nbr, char *base);
 void			ft_putnstr(char *s, size_t n);
 int				get_size_inbase(long number, char *base);
-
+char			*ft_longtoa(long n);
 #endif
