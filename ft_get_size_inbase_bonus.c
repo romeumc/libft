@@ -6,13 +6,13 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 00:30:15 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/22 22:18:43 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/22 23:43:22 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_size_inbase(long number, char *base)
+int	ft_get_size_inbase(long number, char *base)
 {
 	size_t	lenbase;
 	int		counter;
