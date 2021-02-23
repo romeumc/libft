@@ -6,7 +6,7 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 11:12:23 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/23 00:23:49 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/23 15:08:18 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	ft_print_radix(long int nbr, char *base, char *result, int *pos)
 	len_base = ft_strlen(base);
 	if (nbr < 0)
 	{
-		nbr *= -1;
+		len_base *= -1;
 		result[*pos] = '-';
 		(*pos)++;
 	}
