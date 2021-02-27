@@ -6,7 +6,7 @@
 #    By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/07 22:00:16 by rmartins          #+#    #+#              #
-#    Updated: 2021/02/23 18:00:18 by rmartins         ###   ########.fr        #
+#    Updated: 2021/02/27 22:46:12 by rmartins         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ SRCS_BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_iscntrl_bonus.c ft_ispunct_bonus.c ft_islower_bonus.c \
 			ft_isupper_bonus.c ft_strdup_join_bonus.c ft_strequ_bonus.c \
 			ft_itoa_base_bonus.c ft_realloc_bonus.c ft_putnstr_bonus.c \
-			ft_long_tobase_bonus.c ft_get_size_inbase_bonus.c \
+			ft_ulong_tobase_bonus.c ft_getsize_ulonginbase_bonus.c \
 			ft_longtoa_bonus.c \
 			# ft_swap_bonus.c ft_sqrt_bonus.c  \
 			 
