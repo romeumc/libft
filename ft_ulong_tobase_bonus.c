@@ -6,46 +6,36 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 11:12:23 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/23 15:08:18 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/27 22:38:32 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Nesta função estão duas formas de tratar os ponteiros
-*/
-
-static void	ft_print_radix(long int nbr, char *base, char *result, int *pos)
+static void	ft_print_radix(unsigned long nb, char *base, char *result, int *pos)
 {
-	int	len_base;
+	unsigned int	len_base;
 
 	len_base = ft_strlen(base);
-	if (nbr < 0)
+	if (nb >= len_base)
 	{
-		len_base *= -1;
-		result[*pos] = '-';
-		(*pos)++;
-	}
-	if (nbr >= len_base)
-	{
-		ft_print_radix(nbr / len_base, base, result, pos);
-		ft_print_radix(nbr % len_base, base, result, pos);
+		ft_print_radix(nb / len_base, base, result, pos);
+		ft_print_radix(nb % len_base, base, result, pos);
 	}
 	else
 	{
-		result[pos[0]] = base[nbr];
+		result[pos[0]] = base[nb];
 		pos[0]++;
 	}
 }
 
-char		*ft_long_tobase(long int nbr, char *base)
+char		*ft_ulong_tobase(unsigned long int nbr, char *base)
 {
 	char	*result;
 	int		pos;
 
 	pos = 0;
-	result = malloc(sizeof(char) * (ft_get_size_inbase(nbr, base) + 1));
+	result = malloc(sizeof(char) * (ft_getsize_ulonginbase(nbr, base) + 1));
 	if (result == NULL)
 		return (NULL);
 	ft_print_radix(nbr, base, result, &pos);

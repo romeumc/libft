@@ -6,22 +6,22 @@
 /*   By: rmartins <rmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 00:30:15 by rmartins          #+#    #+#             */
-/*   Updated: 2021/02/22 23:43:22 by rmartins         ###   ########.fr       */
+/*   Updated: 2021/02/27 22:36:34 by rmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_get_size_inbase(long number, char *base)
+int	ft_getsize_ulonginbase(unsigned long nb, char *base)
 {
-	size_t	lenbase;
-	int		counter;
+	size_t			lenbase;
+	int				counter;
 
 	counter = 1;
 	lenbase = ft_strlen(base);
-	while (number >= (long)lenbase)
+	while (nb >= (unsigned long)lenbase)
 	{
-		number /= lenbase;
+		nb /= lenbase;
 		counter++;
 	}
 	return (counter);
